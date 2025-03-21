@@ -1,0 +1,240 @@
+/* Pricing.css */
+
+.pricing {
+    padding: 80px 0;
+    background-color: white;
+  }
+
+  .pricing-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+    gap: 16px;
+  }
+
+  .pricing-toggle span {
+    font-size: 1rem;
+    color: var(--text-light);
+    transition: color 0.3s ease;
+  }
+
+  .pricing-toggle span.active {
+    color: var(--text-color);
+    font-weight: 600;
+  }
+
+  .save-badge {
+    display: inline-block;
+    background-color: rgba(36, 180, 126, 0.1);
+    color: var(--accent-color);
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 12px;
+    margin-left: 6px;
+  }
+
+  /* Switch toggle */
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+  }
+
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--border-color);
+    transition: .4s;
+  }
+
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+  }
+
+  input:checked + .slider {
+    background-color: var(--primary-color);
+  }
+
+  input:checked + .slider:before {
+    transform: translateX(26px);
+  }
+
+  .slider.round {
+    border-radius: 34px;
+  }
+
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+  /* Pricing plans */
+  .pricing-plans {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    margin-bottom: 60px;
+  }
+
+  .pricing-card {
+    flex: 1;
+    max-width: 350px;
+    background-color: white;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    padding: 32px;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+
+  .pricing-card.popular {
+    border-color: var(--primary-color);
+    box-shadow: 0 8px 30px rgba(99, 91, 255, 0.15);
+    transform: scale(1.05);
+  }
+
+  .popular-badge {
+    position: absolute;
+    top: -12px;
+    right: 24px;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 12px;
+  }
+
+  .pricing-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+  }
+
+  .price {
+    margin-bottom: 16px;
+    display: flex;
+    align-items: baseline;
+  }
+
+  .currency {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-right: 4px;
+  }
+
+  .amount {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  .period {
+    font-size: 1rem;
+    color: var(--text-light);
+    margin-left: 4px;
+  }
+
+  .plan-description {
+    color: var(--text-light);
+    margin-bottom: 24px;
+  }
+
+  .plan-btn {
+    width: 100%;
+    background-color: white;
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    padding: 12px;
+    border-radius: var(--radius);
+    font-weight: 600;
+    margin-bottom: 24px;
+    transition: all 0.3s ease;
+  }
+
+  .plan-btn:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+  }
+
+  .plan-btn.popular-btn {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+  }
+
+  .plan-btn.popular-btn:hover {
+    background-color: var(--primary-dark);
+  }
+
+  .features-list {
+    list-style: none;
+  }
+
+  .features-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    color: var(--text-light);
+  }
+
+  .features-list li i {
+    color: var(--accent-color);
+    margin-right: 12px;
+    font-size: 0.875rem;
+  }
+
+  .enterprise-cta {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: var(--background-light);
+    padding: 40px;
+    border-radius: var(--radius);
+  }
+
+  .enterprise-cta h3 {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+  }
+
+  .enterprise-cta p {
+    color: var(--text-light);
+    margin-bottom: 24px;
+  }
+
+  /* Responsive styles */
+  @media (max-width: 992px) {
+    .pricing-plans {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .pricing-card {
+      max-width: 100%;
+      width: 100%;
+    }
+
+    .pricing-card.popular {
+      transform: scale(1);
+      order: -1;
+    }
+  }
