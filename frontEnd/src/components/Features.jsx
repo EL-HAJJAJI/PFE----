@@ -2,6 +2,9 @@ import React from 'react';
 import '../styles/Features.css';
 
 const Features = () => {
+
+  
+
   const featuresList = [
     {
       icon: 'fa-tasks',

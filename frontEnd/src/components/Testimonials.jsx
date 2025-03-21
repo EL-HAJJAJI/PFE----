@@ -37,8 +37,8 @@ const Testimonials = () => {
     <section id="testimonials" className="testimonials">
       <div className="container">
         <div className="section-header">
-          <h2>Ce que nos clients disent</h2>
-          <p>Des entreprises de toutes tailles font confiance à TaskFlow</p>
+          <h2>Notre marque de voitures</h2>
+          <p>Une marque de voitures synonyme de fiabilité et de performance</p>
         </div>
 
         <div className="client-logos">
